@@ -1,9 +1,42 @@
 $backgroundColor: #ffffff;
+$sidebarBackgroundColor: #aaaaaa;
+$sidebarWidth: 200px;
 $bodyColor: #000000;
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$padding: 16px;
 
 body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
+  padding: 0;
+  margin: 0;
+}
+
+.frame {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.sidebar {
+  margin: 0;
+  padding: $padding;
+  background-color: $sidebarBackgroundColor;
+  width: $sidebarWidth;
+  height: 100%;
+  position: fixed;
+  box-sizing: border-box;
+}
+
+.content {
+  flex: 1 1 auto;
+  position: absolute;
+  left: $sidebarWidth;
+  padding: 16px;
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
 }

@@ -3,4 +3,5 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "My Blog" # the name of your site, e.g. ACME Corp.
 plugins:
   - jekyll-paginate
-paginate: 5
+paginate: 10
+paginate_path: "/blog/page:num"
