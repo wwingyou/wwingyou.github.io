@@ -1,36 +1,37 @@
 ---
 layout: sidebar
 ---
-<h1>Welcome to my Blog!</h1>
-<h2>List of Posts</h2>
+<h1>POSTS</h1>
 <p>Total Posts: {{ paginator.total_posts }}</p>
 {% for post in paginator.posts %}
-  <div>
-    <div>
+  <div class="post-item">
+    <div class="tags">
       {% for tag in post.tags %}
-        <span class="tag">{{ tag }}</span>
+        <span>{{ tag }}</span>
       {% endfor %}
     </div>
-    <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <p class="post-date">{{ post.date | date: "%Y-%m-%d" }}</p>
+    <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <p class="date">{{ post.date | date: "%Y-%m-%d" }}</p>
   </div>
 {% endfor %}
-{% if paginator.total_pages > 1 %}
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ site.paginate_path | relative_url | replace: 'page:num', '' }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+<div class="paginator">
+  {% if paginator.total_pages > 1 %}
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
     {% endif %}
-  {% endfor %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <em>{{ page }}</em>
+      {% elsif page == 1 %}
+        <a href="{{ site.paginate_path | relative_url | replace: 'page:num', '' }}">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    {% endif %}
   {% endif %}
-{% endif %}
+</div>
