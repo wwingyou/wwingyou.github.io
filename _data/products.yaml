@@ -1,0 +1,11 @@
+goolbitg:
+  title_ko: 굴비잇기
+  title_en: Goolbitg
+  main_image: "/assets/images/goolbitg_ppt.jpg"
+  links:
+    - name: App Store
+      url: "https://apps.apple.com/kr/app/%EA%B5%B4%EB%B9%84%EC%9E%87%EA%B8%B0/id6741732715?l=en-GB"
+    - name: Google Play Store
+      url: "https://play.google.com/store/apps/details?id=com.project.goolbi&hl=ko"
+  project_description: "절약이 필요한 '굴비'들의 절약생활을 도와주는 짠테크 앱"
+  post_description: "이 포스트는 CMC 16th 프로젝트인 '굴비잇기' 앱을 제작하며 고민한 내용을 기록하는 글입니다."

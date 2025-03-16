@@ -10,7 +10,7 @@ layout: sidebar
         <span>{{ tag }}</span>
       {% endfor %}
     </div>
-    <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a class="title" href="{{ post.url | relative_url }}">[{{ post.categories.last | upcase }}] {{ post.title }}</a>
     <p class="date">{{ post.date | date: "%Y-%m-%d" }}</p>
   </div>
 {% endfor %}
