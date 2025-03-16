@@ -172,6 +172,10 @@ a {
     line-height: 20px;
   }
 
+  strong {
+    font-weight: bold;
+  }
+
   .content-inner {
     max-width: 800px;
     min-width: 350px;
@@ -286,6 +290,36 @@ a {
       color: $point;
     }
 
+  }
+
+  .home {
+
+    h3 {
+      margin-top: 8px;
+      color: $point;
+    }
+
+    .stack-inner {
+      display: flex;
+      width: 100%;
+
+      div {
+        flex: 1;
+      }
+
+    }
+
+    .history {
+      ul {
+        padding-left: 18px;
+        list-style: circle;
+        font-size: 14px;
+      }
+    }
+
+    ul {
+      line-height: 16px;
+    }
   }
 }
 
