@@ -3,8 +3,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "My Blog" # the name of your site, e.g. ACME Corp.
 plugins:
   - jekyll-paginate
+  - jekyll-mermaid
 paginate: 10
 paginate_path: "/blog/page:num"
 markdown: kramdown
 highlighter: rouge
 timezone: Asia/Seoul
+mermaid:
+  src: '/assets/javascript/mermaid.js'
