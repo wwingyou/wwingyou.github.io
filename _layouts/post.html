@@ -12,10 +12,13 @@ layout: sidebar
 {% if page.product %}
   <section class="front-matter">
     <em>{{ site.data.products[page.product].post_description }}</em>
-    <div>
+    <ul>
       {% for link in site.data.products[page.product].links %}
-        <a href="{{ link.url }}">{{ link.name }}</a> {% endfor %}
-    </div>
+        <li>
+          <a href="{{ link.url }}">{{ link.name }}</a> 
+        </li>
+      {% endfor %}
+    </ul>
     <div>
       <img src="{{ site.data.products[page.product].main_image }}" alt="main image">
     </div>
