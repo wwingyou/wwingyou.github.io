@@ -3,6 +3,12 @@ layout: sidebar
 ---
 <a class="goback" href="javascript:window.history.back();">< Go Back</a>
 <h1>[{{ page.categories.last | upcase }}] {{ page.title }}</h1>
+<div class="tags">
+  {% for tag in page.tags %}
+    <span>{{ tag }}</span>
+  {% endfor %}
+</div>
+<br/>
 {% if page.product %}
   <section class="front-matter">
     <em>{{ site.data.products[page.product].post_description }}</em>

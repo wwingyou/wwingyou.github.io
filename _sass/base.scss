@@ -152,7 +152,7 @@ a {
   h1 {
     font-size: 36px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   h2 {
@@ -182,24 +182,25 @@ a {
     width: 60vw;
   }
 
+  .tags {
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+    span {
+      background-color: $point;
+      color: $textLight;
+      font-size: 12px;
+      padding: 2px;
+    }
+
+  }
+
   .post-item {
     margin-top: 12px;
     margin-bottom: 12px;
     padding-top: 4px;
     padding-bottom: 4px;
 
-    .tags {
-      margin-top: 4px;
-      margin-bottom: 4px;
-
-      span {
-        background-color: $point;
-        color: $textLight;
-        font-size: 12px;
-        padding: 2px;
-      }
-
-    }
 
     .title {
       font-size: 24px;
